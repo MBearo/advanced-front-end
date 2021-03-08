@@ -256,7 +256,7 @@ if (!Array.prototype.reduce) {
 
 上述代码中使用了 `value` 作为初始值，并通过 `while` 循环，依次累加计算出 `value` 结果并输出。但是相比 MDN 上述实现，我个人更喜欢的实现方案是：
 
-```text
+```javascript
 Array.prototype.reduce = Array.prototype.reduce || function(func, initialValue) {
     var arr = this
     var base = typeof initialValue === 'undefined' ? arr[0] : initialValue
